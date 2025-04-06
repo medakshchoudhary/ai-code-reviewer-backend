@@ -3,6 +3,8 @@ dotenv.config(); // check if added here then why needed inside the ai.service.js
 
 import app from "./src/app.js";
 
-app.listen(3000, () => {
-  console.log("Port live on http://localhost:3000/");
+app.get("/",(req,res)=>{
+    res.send("Server is running");
 });
+
+app.listen(3000);
